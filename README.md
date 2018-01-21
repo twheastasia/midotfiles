@@ -108,3 +108,15 @@ tryLink ~/.midotfiles/liquidpromptrc ~/.liquidpromptrc
 ```
 tryLink ~/.midotfiles/dircolors.256dark ~/.dir_colors
 ```
+
+
+
+## python
+python get-pip.py
+(wget https://bootstrap.pypa.io/get-pip.py)
+
+## nvm
+
+## rvm
+
+
