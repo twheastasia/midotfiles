@@ -134,3 +134,18 @@ curl -sSL https://get.rvm.io | bash -s stable
 ```
 http://www.rvm.io/
 
+
+## owncloud
+
+## Aria2
+```
+sudo apt-get install aria2
+sudo mkdir /etc/aria2    #新建文件夹  
+sudo touch /etc/aria2/aria2.session    #新建session文件
+sudo chmod 777 /etc/aria2/aria2.session    #设置aria2.session可写 
+#创建配置文件,修改其中的下载目录
+tryLink ~/.midotfiles/aria2.conf /etc/aria2/aria2.conf
+
+#后台启动aria2 
+sudo aria2c --conf-path=/etc/aria2/aria2.conf -D
+```
