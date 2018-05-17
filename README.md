@@ -149,3 +149,8 @@ tryLink ~/.midotfiles/aria2.conf /etc/aria2/aria2.conf
 #后台启动aria2 
 sudo aria2c --conf-path=/etc/aria2/aria2.conf -D
 ```
+
+## frp
+
+## nginx
+
