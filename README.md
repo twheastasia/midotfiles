@@ -152,5 +152,28 @@ sudo aria2c --conf-path=/etc/aria2/aria2.conf -D
 
 ## frp
 
+```
+https://github.com/fatedier/frp/blob/master/README_zh.md
+```
+
 ## nginx
+
+
+## docker
+https://docs.docker-cn.com/engine/installation/linux/docker-ce/ubuntu/#%E4%BD%BF%E7%94%A8%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85
+```
+sudo apt-get update
+
+sudo apt-get install \
+     apt-transport-https \
+     ca-certificates \
+     curl \
+     software-properties-common
+     
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) \
+    stable"
+```
 
