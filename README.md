@@ -52,6 +52,8 @@ sudo apt remove vim
 sudo add-apt-repository --remove ppa:jonathonf/vim
 ```
 * run in bash:
+
+http://swiftsignal.com/packages/ubuntu/quantal/the-silver-searcher_0.14-1_amd64.deb
 ```
 sudo apt-get install silversearcher-ag vim-nox ctags
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
