@@ -169,6 +169,10 @@ https://github.com/fatedier/frp/blob/master/README_zh.md
 ## docker
 https://docs.docker-cn.com/engine/installation/linux/docker-ce/ubuntu/#%E4%BD%BF%E7%94%A8%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85
 ```
+curl -sSL https://get.docker.com | sh
+
+or
+
 sudo apt-get update
 
 sudo apt-get install \
