@@ -81,6 +81,11 @@ tryLink ~/.midotfiles/zshrc ~/.zprezto/runcoms/zshrc
 * run zsh and if everything works well, 'chsh -s /bin/zsh' or 'sudo vipw' to edit your default shell to /bin/zsh
 * PROMPT=$'%{$fg[cyan]%}%* %D%{$reset_color%}|%{$fg[white]%}%U%n%u@%U%m%u%{$reset_color%}|%{$fg[yellow]%}D:%B%~%b >>> %{$reset_color%}\n%# '
 
+## oh my zsh
+```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
 ## bash bashit(for develop)
 * run in bash:
 ```
