@@ -4,7 +4,7 @@
 * run in bash:
 ```
 sudo apt-get update && sudo apt-get install git
-git clone https://github.com/chenmi319/midotfiles.git ~/.midotfiles
+git clone https://github.com/twheastasia/midotfiles.git ~/.midotfiles
 ```
 * you should run register function tryLink before you use it:
 ```
