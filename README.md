@@ -188,3 +188,26 @@ sudo add-apt-repository \
     stable"
 ```
 
+
+## samba
+
+```
+sudo apt-get install samba
+sudo vim /etc/samba/smb.conf
+sudo /etc/init.d/smb restart
+------
+[nfs_share]
+  #设置共享目录的路径
+  path=/home/twh/share
+  browseable=yes
+  writable=yes  
+  comment=smb share test
+  public=yes
+  available= yes
+  force user = nobody
+  force group = nogroup
+  #这一行是特别重要的，设置可以被共享访问！！
+  guest ok=yes
+  create mask = 0775
+  directory mask = 0775
+```
