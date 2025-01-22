@@ -8,7 +8,7 @@ git clone https://github.com/twheastasia/midotfiles.git ~/.midotfiles
 ```
 * you should run register function tryLink before you use it:
 ```bash
-tryLink(){
+try_link(){
   if [[ -a $2 ]]; then mv -f $2 $2.bak; fi
   ln -s $1 $2
 }
@@ -33,15 +33,11 @@ tryLink ~/.midotfiles/gitignore ~/.gitignore
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 try_link ~/.midotfiles/zshrc ~/.zshrc
-
 ```
 
 ## [tmux](https://github.com/tmux/tmux/wiki/Installing)
 * run in bash:
 ```bash
-#sudo apt-get update
-#sudo apt-get -y install software-properties-common
-#sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
 sudo apt-get install -y tmux
 tryLink ~/.midotfiles/tmux.conf ~/.tmux.conf
@@ -82,25 +78,24 @@ To initialize conda on all available shells, run the following command:
 conda init --all
 ```
 
-## vim
+## nvim
 * [安装 neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md)
 * [安装 nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 * [安装 ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
 * 安装 node, 安装 nvm, nvm install 20, 设置 nvm alias default 20, npm install -g yarn
 ```bash
 mkdir -p ~/.config/nvim/init.vim
-try_link ~/.midotfiles2/vimrc ~/.config/nvim/init.vim
+try_link ~/.midotfiles/vimrc ~/.config/nvim/init.vim
 try_link ~/.config/nvim/init.vim ~/.vimrc
-try_link ~/.midotfiles2/coc-settings.json ~/.config/nvim/coc-settings.json
+try_link ~/.midotfiles/coc-settings.json ~/.config/nvim/coc-settings.json
 
 # 安装 nvim 插件
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-vim +PlugInstall +qall
-# 升级
-vim +PlugUpdate +qall
-# 清理
-vim +PlugClean +qall
+# 安装
+nvim
+:PLugInstall
+
 
 # 安装 autopep8 和 ruff
 conda activate base
@@ -113,8 +108,8 @@ conda deactivate
 # 安装 coc.nvim 以及插件
 cd ~/.vim/bundle/coc.nvim; yarn install --frozen-lockfile
 # 参考 vimrc 里面的配置
-# vim 里运行 :CocInstall coc-calc coc-diagnostic coc-git coc-json coc-xml coc-yaml coc-pairs coc-lists
-# vim 里按需运行 :CocInstall coc-pyright @yaegassy/coc-ruff coc-tsserver coc-solargraph coc-sh coc-docker @yaegassy/coc-nginx coc-markdownlint coc-sql coc-html @yaegassy/coc-tailwindcss3 coc-prettier
+# nvim 里运行 :CocInstall coc-calc coc-diagnostic coc-git coc-json coc-xml coc-yaml coc-pairs coc-lists
+# nvim 里按需运行 :CocInstall coc-pyright @yaegassy/coc-ruff coc-tsserver coc-solargraph coc-sh coc-docker @yaegassy/coc-nginx coc-markdownlint coc-sql coc-html @yaegassy/coc-tailwindcss3 coc-prettier
 # 删除: :CocList extensions, 然后 tab
 ```
 
