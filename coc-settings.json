@@ -27,5 +27,5 @@
     "python.linting.ruffPath": "~/bin/ruff",
     "prettier.printWidth": 120,
     "javascript.format.enable": false,
-    "typescript.format.enable": false,
-  }
+    "typescript.format.enable": false
+}
